@@ -71,3 +71,4 @@ class People {
 
     }
 }
+module.exports = { People };
