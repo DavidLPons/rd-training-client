@@ -10,7 +10,7 @@ class Movies {
 
     async find({ fields, headers, context, filter }) {
 
-        const reault = await query({
+        return await query({
             query: `query ($filter: training_movies_find_filter){
                 training {
                     movies_find(filter: $filter) {
@@ -29,7 +29,7 @@ class Movies {
     }
 
     async insert({ fields, headers, context, filter }) {
-        const reault = await query({
+        return await query({
             query: `mutation ($filter: [training_movies_insert_filter!]!){
                 training {
                     movies_insert(filter: $filter) {
@@ -48,7 +48,7 @@ class Movies {
     }
 
     async remove({ fields, headers, context, filter }) {
-        const reault = await query({
+        return await query({
             query: `mutation ($filter: training_movies_remove_filter){
                 training {
                     movies_remove(filter: $filter) {
