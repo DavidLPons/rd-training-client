@@ -1,6 +1,6 @@
 {
   "name": "training-prefixes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "prefix to be used by a graphServer",
   "author": "David Lopez <david.pons@simpleviewinc.com>",
   "main": "src/Index.js",
