@@ -1,11 +1,11 @@
 {
-  "name": "Training-prefixes",
+  "name": "training-prefixes",
   "version": "1.0.0",
   "description": "prefix to be used by a graphServer",
   "author": "David Lopez <david.pons@simpleviewinc.com>",
-  "main": "src/index.js",
+  "main": "src/Index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/Index.js",
     "test": "mocha lib/test"
   },
   "dependencies": {
