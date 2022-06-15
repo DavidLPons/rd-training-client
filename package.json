@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "prefix to be used by a graphServer",
   "author": "David Lopez <david.pons@simpleviewinc.com>",
-  "main": "lib/server.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node lib/server.js",
+    "start": "node src/index.js",
     "test": "mocha lib/test"
   },
   "dependencies": {
