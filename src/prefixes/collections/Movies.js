@@ -14,7 +14,7 @@ class Movies {
             query: `query ($filter: training_movies_find_filter){
                 training {
                     movies_find(filter: $filter) {
-                        ${filter}
+                        ${fields}
                     }
                 }
             }`,
