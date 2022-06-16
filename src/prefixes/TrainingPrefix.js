@@ -11,23 +11,23 @@ class TrainingPrefix {
         this.people = new People({ graphUrl, graphServer });
     }
     async movies_find({ fields, headers, context, filter }) {
-        return Movies.movies_find({ fields, headers, context, filter });
+        return this.movies.find({ fields, headers, context, filter });
     }
     async movies_insert({ fields, headers, context, filter }) {
-        return Movies.movies_insert({ fields, headers, context, filter });
+        return this.movies.insert({ fields, headers, context, filter });
     }
     async movies_remove({ fields, headers, context, filter }) {
-        return Movies.movies_remove({ fields, headers, context, filter });
+        return this.movies.remove({ fields, headers, context, filter });
     }
 
     async people_find({ fields, headers, context, filter }) {
-        return Movies.people_find({ fields, headers, context, filter });
+        return this.people.find({ fields, headers, context, filter });
     }
     async people_insert({ fields, headers, context, filter }) {
-        return Movies.people_insert({ fields, headers, context, filter });
+        return this.people.insert({ fields, headers, context, filter });
     }
     async people_remove({ fields, headers, context, filter }) {
-        return Movies.people_remove({ fields, headers, context, filter });
+        return this.people.remove({ fields, headers, context, filter });
     }
 }
 
