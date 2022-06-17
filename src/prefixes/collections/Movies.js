@@ -24,6 +24,7 @@ class Movies {
             url: this._graphUrl,
             headers,
             //key: "data.data.training",
+            key: "training.movies_find",
             clean: true
         });
     }
