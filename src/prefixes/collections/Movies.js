@@ -9,8 +9,7 @@ class Movies {
     }
 
     async find({ fields, headers, context, filter }) {
-
-        return await query({
+        var aux = await query({
             query: `query ($filter: training_movies_find_filter){
                 training {
                     movies_find(filter: $filter) {
@@ -26,6 +25,8 @@ class Movies {
             key: "data.data.training",
             clean: true
         });
+        console.log("aux-> ", aux);
+        return aux;
     }
 
     async insert({ fields, headers, context, filter }) {
