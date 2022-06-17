@@ -22,7 +22,7 @@ class People {
             },
             url: this._graphUrl,
             headers,
-            key: "data.data.training",
+            key: "training.people_find",
             clean: true
         });
     }
@@ -41,7 +41,7 @@ class People {
             },
             url: this._graphUrl,
             headers,
-            key: "data.data.training",
+            key: "training.people_insert",
             clean: true
         });
     }
@@ -60,7 +60,7 @@ class People {
             },
             url: this._graphUrl,
             headers,
-            key: "data.data.training",
+            key: "training.people_remove",
             clean: true
         });
     }

@@ -23,7 +23,6 @@ class Movies {
             },
             url: this._graphUrl,
             headers,
-            //key: "data.data.training",
             key: "training.movies_find",
             clean: true
         });
@@ -43,7 +42,7 @@ class Movies {
             },
             url: this._graphUrl,
             headers,
-            key: "data.data.training",
+            key: "training.movies_insert",
             clean: true
         });
     }
@@ -62,7 +61,7 @@ class Movies {
             },
             url: this._graphUrl,
             headers,
-            key: "data.data.training",
+            key: "training.movies_remove",
             clean: true
         });
     }
