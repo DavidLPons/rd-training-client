@@ -29,6 +29,35 @@ class TrainingPrefix {
 	async people_remove({ fields, headers, context, filter }) {
 		return await this.people.remove({ fields, headers, context, filter });
 	}
+
+	async test_clear() {
+		return await query({
+			query: `mutation {
+				training {
+                    tests_clear {
+                        
+                    }
+                }
+            }`,
+			url: this._graphUrl
+		});
+	}
+	async test_setup({ filter }) {
+		return await query({
+			query: `mutation ($filter: [training_people_insert_filter!]!){
+                training {
+                    tests_insert(filter: $filter) {
+                        
+                    }
+                }
+            }`,
+			variables: {
+				filter
+			},
+			url: this._graphUrl
+		});
+
+	}
 }
 
 module.exports = { TrainingPrefix };
