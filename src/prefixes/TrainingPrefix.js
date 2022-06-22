@@ -1,5 +1,7 @@
 const { Movies } = require('./collections/Movies')
 const { People } = require('./collections/People')
+const { query } = require("@simpleview/sv-graphql-client");
+
 
 class TrainingPrefix {
 	constructor({ graphUrl, graphServer }) {
@@ -35,25 +37,24 @@ class TrainingPrefix {
 			query: `mutation {
 				training {
                     tests_clear {
-                        
+                        success,
+						message
                     }
                 }
             }`,
 			url: this._graphUrl
 		});
 	}
-	async test_setup({ filter }) {
+	async test_setup() {
 		return await query({
-			query: `mutation ($filter: [training_people_insert_filter!]!){
+			query: `mutation{
                 training {
-                    tests_insert(filter: $filter) {
-                        
+                    tests_setup {
+                        success,
+						message
                     }
                 }
             }`,
-			variables: {
-				filter
-			},
 			url: this._graphUrl
 		});
 
