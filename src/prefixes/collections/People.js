@@ -27,7 +27,7 @@ class People {
         });
     }
 
-    async insert(fields, headers, context, filter) {
+	async insert({ fields, headers, context, filter }) {
         return await query({
             query: `mutation ($filter: [training_people_insert_filter!]!){
                 training {
