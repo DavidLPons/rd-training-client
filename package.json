@@ -1,10 +1,10 @@
 {
-  "name": "training-prefixes",
-  "version": "1.0.0",
-  "description": "prefix to be used by a graphServer",
-  "author": "David Lopez <david.pons@simpleviewinc.com>",
-  "main": "src/index.js",
-  "dependencies": {
-    "@simpleview/sv-graphql-client": "2.0.1"
-  }
+	"name": "training-prefixes",
+	"version": "1.0.0",
+	"description": "prefix to be used by a graphServer",
+	"author": "David Lopez <david.pons@simpleviewinc.com>",
+	"main": "src/index.js",
+	"dependencies": {
+		"@simpleview/sv-graphql-client": "2.0.1"
+	}
 }
