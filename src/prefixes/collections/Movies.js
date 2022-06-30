@@ -9,13 +9,15 @@ class Movies {
 
 	async find({ fields, headers, context, filter }) {
 		return await query({
-			query: `query ($filter: training_movies_find_filter){
-				training {
-					movies_find(filter: $filter) {
-						${fields}
+			query: `
+				query ($filter: training_movies_find_filter){
+					training {
+						movies_find(filter: $filter) {
+							${fields}
+						}
 					}
 				}
-			}`,
+			`,
 			variables: { filter },
 			url: this._graphUrl,
 			headers,
@@ -26,13 +28,15 @@ class Movies {
 
 	async insert({ fields, headers, context, filter }) {
 		return await query({
-			query: `mutation ($filter: [training_movies_insert_filter!]!){
-				training {
-					movies_insert(filter: $filter) {
-					${fields}
+			query: `
+				mutation ($filter: [training_movies_insert_filter!]!){
+					training {
+						movies_insert(filter: $filter) {
+						${fields}
+						}
 					}
 				}
-			}`,
+			`,
 			variables: { filter },
 			url: this._graphUrl,
 			headers,
@@ -43,13 +47,15 @@ class Movies {
 
 	async remove({ fields, headers, context, filter }) {
 		return await query({
-			query: `mutation ($filter: training_movies_remove_filter){
-				training {
-					movies_remove(filter: $filter) {
-						${fields}
+			query: `
+				mutation ($filter: training_movies_remove_filter){
+					training {
+						movies_remove(filter: $filter) {
+							${fields}
+						}
 					}
 				}
-			}`,
+			`,
 			variables: { filter },
 			url: this._graphUrl,
 			headers,

@@ -1,5 +1,5 @@
-const { Movies } = require('./collections/Movies')
-const { People } = require('./collections/People')
+const { Movies } = require("./collections/Movies")
+const { People } = require("./collections/People")
 const { query } = require("@simpleview/sv-graphql-client");
 
 
@@ -39,28 +39,32 @@ class TrainingPrefix {
 
 	async test_clear() {
 		return await query({
-			query: `mutation {
-				training {
-					tests_clear {
-						success,
-						message
+			query: `
+				mutation {
+					training {
+						tests_clear {
+							success,
+							message
+						}
 					}
 				}
-			}`,
+			`,
 			url: this._graphUrl
 		});
 	}
 
 	async test_setup() {
 		return await query({
-			query: `mutation{
-				training {
-					tests_setup {
-						success,
-						message
+			query: `
+				mutation{
+					training {
+						tests_setup {
+							success,
+							message
+						}
 					}
 				}
-			}`,
+			`,
 			url: this._graphUrl
 		});
 	}

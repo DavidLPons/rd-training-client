@@ -9,13 +9,15 @@ class People {
 
 	async find({ fields, headers, context, filter }) {
 		return await query({
-			query: `query ($filter: training_people_find_filter){
-				training {
-					people_find(filter: $filter) {
-						${fields}
+			query: `
+				query ($filter: training_people_find_filter){
+					training {
+						people_find(filter: $filter) {
+							${fields}
+						}
 					}
 				}
-			}`,
+			`,
 			variables: { filter },
 			url: this._graphUrl,
 			headers,
@@ -26,13 +28,15 @@ class People {
 
 	async insert({ fields, headers, context, filter }) {
 		return await query({
-			query: `mutation ($filter: [training_people_insert_filter!]!){
-				training {
-					people_insert(filter: $filter) {
-						${fields}
+			query: `
+				mutation ($filter: [training_people_insert_filter!]!){
+					training {
+						people_insert(filter: $filter) {
+							${fields}
+						}
 					}
 				}
-			}`,
+			`,
 			variables: { filter },
 			url: this._graphUrl,
 			headers,
@@ -43,13 +47,15 @@ class People {
 
 	async remove({ fields, headers, context, filter }) {
 		return await query({
-			query: `mutation ($filter: training_people_remove_filter){
-				training {
-					people_remove(filter: $filter) {
-						${fields}
+			query: `
+				mutation ($filter: training_people_remove_filter){
+					training {
+						people_remove(filter: $filter) {
+							${fields}
+						}
 					}
 				}
-			}`,
+			`,
 			variables: { filter },
 			url: this._graphUrl,
 			headers,
