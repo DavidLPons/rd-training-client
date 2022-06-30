@@ -26,18 +26,18 @@ class Movies {
 		});
 	}
 
-	async insert({ fields, headers, context, filter }) {
+	async insert({ fields, headers, context, input }) {
 		return await query({
 			query: `
-				mutation ($filter: [training_movies_insert_filter!]!){
+				mutation ($input: [training_movies_insert_filter!]!){
 					training {
-						movies_insert(filter: $filter) {
+						movies_insert(input: $input) {
 						${fields}
 						}
 					}
 				}
 			`,
-			variables: { filter },
+			variables: { input },
 			url: this._graphUrl,
 			headers,
 			key: "training.movies_insert",
@@ -45,18 +45,18 @@ class Movies {
 		});
 	}
 
-	async remove({ fields, headers, context, filter }) {
+	async remove({ fields, headers, context, input }) {
 		return await query({
 			query: `
-				mutation ($filter: training_movies_remove_filter){
+				mutation ($input: training_movies_remove_filter){
 					training {
-						movies_remove(filter: $filter) {
+						movies_remove(input: $input) {
 							${fields}
 						}
 					}
 				}
 			`,
-			variables: { filter },
+			variables: { input },
 			url: this._graphUrl,
 			headers,
 			key: "training.movies_remove",

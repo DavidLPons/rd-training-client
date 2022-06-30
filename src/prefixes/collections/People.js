@@ -26,18 +26,18 @@ class People {
 		});
 	}
 
-	async insert({ fields, headers, context, filter }) {
+	async insert({ fields, headers, context, input }) {
 		return await query({
 			query: `
-				mutation ($filter: [training_people_insert_filter!]!){
+				mutation ($input: [training_people_insert_filter!]!){
 					training {
-						people_insert(filter: $filter) {
+						people_insert(input: $input) {
 							${fields}
 						}
 					}
 				}
 			`,
-			variables: { filter },
+			variables: { input },
 			url: this._graphUrl,
 			headers,
 			key: "training.people_insert",
@@ -45,18 +45,18 @@ class People {
 		});
 	}
 
-	async remove({ fields, headers, context, filter }) {
+	async remove({ fields, headers, context, input }) {
 		return await query({
 			query: `
-				mutation ($filter: training_people_remove_filter){
+				mutation ($input: training_people_remove_filter){
 					training {
-						people_remove(filter: $filter) {
+						people_remove(input: $input) {
 							${fields}
 						}
 					}
 				}
 			`,
-			variables: { filter },
+			variables: { input },
 			url: this._graphUrl,
 			headers,
 			key: "training.people_remove",
