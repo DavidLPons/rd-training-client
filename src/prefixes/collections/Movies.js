@@ -21,7 +21,7 @@ class Movies {
 			variables: { filter },
 			url: this._graphUrl,
 			headers,
-			key: "training.movies_find",
+			key: "training.movies.find",
 			clean: true
 		});
 	}
@@ -32,7 +32,7 @@ class Movies {
 				mutation ($input: [training_movies_insert_filter!]!){
 					training {
 						movies_insert(input: $input) {
-						${fields}
+							${fields}
 						}
 					}
 				}
@@ -40,7 +40,7 @@ class Movies {
 			variables: { input },
 			url: this._graphUrl,
 			headers,
-			key: "training.movies_insert",
+			key: "training.movies.insert",
 			clean: true
 		});
 	}
@@ -59,7 +59,7 @@ class Movies {
 			variables: { input },
 			url: this._graphUrl,
 			headers,
-			key: "training.movies_remove",
+			key: "training.movies.remove",
 			clean: true
 		});
 	}
