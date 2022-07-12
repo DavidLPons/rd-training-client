@@ -21,7 +21,7 @@ class Movies {
 			variables: { filter },
 			url: this._graphUrl,
 			headers,
-			key: "training.movies.find",
+			key: "training.movies_find",
 			clean: true
 		});
 	}
@@ -40,7 +40,7 @@ class Movies {
 			variables: { input },
 			url: this._graphUrl,
 			headers,
-			key: "training.movies.insert",
+			key: "training.movies_insert",
 			clean: true
 		});
 	}
@@ -59,7 +59,7 @@ class Movies {
 			variables: { input },
 			url: this._graphUrl,
 			headers,
-			key: "training.movies.remove",
+			key: "training.movies_remove",
 			clean: true
 		});
 	}
